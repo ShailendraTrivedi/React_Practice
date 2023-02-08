@@ -1,9 +1,10 @@
 import React from 'react'
+import Account from './Account/Account.js'
 
 const App = () => {
   return (
     <>
-      <h1>Shailendra Trivedi</h1>
+    <Account/>
     </>
   )
 }
