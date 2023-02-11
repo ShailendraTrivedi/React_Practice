@@ -29,9 +29,12 @@ const ContactDesign = () => {
     setNumber("");
   };
   //---------------update data---------------------------
-  const updateData = async (todo, newText) => {
-    await updateDoc(doc(db, "todos", todo.id), {
-      text: newText,
+  const updateData = async (data, newText, newNumber) => {
+    // console.log(todo);
+    // console.log(newText);
+    await updateDoc(doc(db, "users", data.id), {
+      user: newText,
+      phone: newNumber,
     });
   };
   //---------------delete data-----------------------------
@@ -86,7 +89,6 @@ const ContactDesign = () => {
                 <tr>
                   <th class="border-2 border-black">Name</th>
                   <th class=" border-2 border-black">Phone Number</th>
-                  <th class=" border-2 border-black">Edit</th>
                   <th class="border-2 border-black">Delete</th>
                 </tr>
               </thead>
